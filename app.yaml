@@ -1,0 +1,34 @@
+application: flaming-octo-archer
+version: 1-0-a-1
+api_version: 1
+runtime: python27
+threadsafe: true
+
+handlers:
+
+# Endpoints api
+- url: /_ah/spi/.*
+  script: api.application
+
+# Main page
+- url: /
+  static_files: index.html
+  upload: index.html
+
+# Client resources
+- url: /res/main.css
+  static_files: main.css
+  upload: main.css
+- url: /res/local
+  static_dir: local_components
+- url: /res/bower
+  static_dir: bower_components
+- url: /res/script.js
+  static_files: script.js
+  upload: script.js
+
+libraries:
+- name: pycrypto
+  version: latest
+- name: endpoints
+  version: 1.0

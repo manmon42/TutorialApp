@@ -1,4 +1,4 @@
-application: flaming-octo-archer
+application: drake-app
 version: 1-0-a-1
 api_version: 1
 runtime: python27

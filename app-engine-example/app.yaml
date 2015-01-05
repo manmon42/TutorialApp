@@ -16,16 +16,13 @@ handlers:
   upload: index.html
 
 # Client resources
-- url: /res/main.css
+- url: /
   static_files: main.css
   upload: main.css
-- url: /res/local
+- url: /
   static_dir: local_components
-- url: /res/bower
+- url: /
   static_dir: bower_components
-- url: /res/script.js
-  static_files: script.js
-  upload: script.js
 
 libraries:
 - name: pycrypto
